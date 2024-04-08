@@ -1,0 +1,50 @@
+[
+    {
+      "id": 1,
+      "estate_title": "Spacious Single-Family Home",
+      "segment_name": "Residential",
+      "description": "Beautiful single-family home with a large backyard and modern amenities.",
+      "price": "$500,000",
+      "status": "sale",
+      "area": "2,500 sq ft",
+      "location": "123 Main Street, Anytown",
+      "facilities": ["living room", "kitchen", "backyard"],
+      "image_url": "https://i.ibb.co/x70ftMS/3d-house-model-with-modern-architecture.jpg"
+    },
+    {
+      "id": 2,
+      "estate_title": "Luxurious Townhouse",
+      "segment_name": "Residential",
+      "description": "Elegant townhouse in a gated community with premium features and security.",
+      "price": "$700,000",
+      "status": "sale",
+      "area": "2,000 sq ft",
+      "location": "456 Elm Street, Anytown",
+      "facilities": ["living room", "swimming pool", "gym"],
+      "image_url": "https://i.ibb.co/KFDDC8f/3d-house-model-with-modern-architecture-1.jpg"
+    },
+    {
+      "id": 3,
+      "estate_title": "Modern Apartment",
+      "segment_name": "Residential",
+      "description": "Contemporary apartment with stunning city views and rooftop amenities.",
+      "price": "$2,500/month",
+      "status": "rent",
+      "area": "1,200 sq ft",
+      "location": "789 Oak Street, Anytown",
+      "facilities": ["living room", "balcony", "fitness center"],
+      "image_url": "https://i.ibb.co/j4XgtVW/cozy-studio-apartment-with-bedroom-living-space.jpg"
+    },
+    {
+      "id": 4,
+      "estate_title": "Cozy Student Housing",
+      "segment_name": "Residential",
+      "description": "Comfortable student housing near campus with shared amenities.",
+      "price": "$800/month",
+      "status": "rent",
+      "area": "600 sq ft",
+      "location": "101 University Avenue, Anytown",
+      "facilities": ["bedroom", "study area", "laundry room"],
+      "image_url": "https://i.ibb.co/164cr1b/man-bed-with-smartphone.jpg"
+    }
+  ]

@@ -1,13 +1,13 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const navLinks = (
     <>
 
     <NavLink to='/'>Home</NavLink>
-    <NavLink to='/'>Home</NavLink>
-    <NavLink to='/'>Home</NavLink>
-    <NavLink to='/'>Home</NavLink>
+    <NavLink to='/login'>Login</NavLink>
+    <NavLink to='/register'>Register</NavLink>
+    
       
     </>
   );
@@ -38,13 +38,15 @@ const Navbar = () => {
             {navLinks}
           </ul>
         </div>
+       
         <a className="btn btn-ghost text-xl">My Dream <br />House</a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{navLinks}</ul>
       </div>
       <div className="navbar-end">
-        <a className="btn">Button</a>
+        <Link to='/login' className="btn">Login</Link>
+        
       </div>
     </div>
   );
