@@ -53,7 +53,7 @@ const Register = () => {
                 <input
                   type="email"
                   name="email"
-                  placeholder="email"
+                  placeholder="Your email address"
                   className="input input-bordered"
                   required
                 />
