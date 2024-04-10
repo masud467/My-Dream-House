@@ -12,9 +12,9 @@ const Navbar = () => {
   };
   const navLinks = (
     <>
-      <NavLink to="/">Home</NavLink>
-      <NavLink to="/login">Login</NavLink>
-      <NavLink to="/register">Register</NavLink>
+      <li><NavLink to="/">Home</NavLink></li>
+      <li><NavLink to="/login">Login</NavLink></li>
+      <li><NavLink to="/register">Register</NavLink></li>
     </>
   );
   return (
