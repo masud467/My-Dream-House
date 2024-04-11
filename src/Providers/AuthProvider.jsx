@@ -13,24 +13,30 @@ import auth from "../Components/Firebase/Firebase.config";
 const AuthProvider = ({children}) => {
 
     const [user,setUser]= useState(null)
+    const [loading,setLoading]= useState(true)
 
     const createUser = (email,password)=>{
+        setLoading(true)
         return createUserWithEmailAndPassword(auth,email,password)
     }
 
     const loginUser = (email,password)=>{
+        setLoading(true)
         return signInWithEmailAndPassword(auth,email,password)
     }
 
     const logInWithGoogle = ()=>{
+        setLoading(true)
         return signInWithPopup(auth,googleProvider)
     }
 
     const logInWithGithub =()=>{
+        setLoading(true)
         return signInWithPopup(auth,githubProvider)
     }
 
     const logOut =()=>{
+        setLoading(true)
         return signOut(auth)
     }
 
@@ -39,6 +45,7 @@ const AuthProvider = ({children}) => {
        const unSubscribe= onAuthStateChanged(auth,currentUser=>{
           if(currentUser){
             setUser(currentUser)
+            setLoading(false)
           }
           else{
             setUser(null)
@@ -52,7 +59,7 @@ const AuthProvider = ({children}) => {
 
     
 
-    const authInfo = {createUser,loginUser,logInWithGoogle,logInWithGithub,user,logOut}
+    const authInfo = {createUser,loginUser,logInWithGoogle,logInWithGithub,user,logOut,loading}
     return (
         <AuthContext.Provider value={authInfo}>
              {children}

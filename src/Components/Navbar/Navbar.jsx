@@ -57,6 +57,7 @@ const Navbar = () => {
         {user ? (
           <div>
             {user.email}
+            {user.photo}
             <button onClick={handleLogOut} className="btn ml-1">
               SignOut
             </button>
