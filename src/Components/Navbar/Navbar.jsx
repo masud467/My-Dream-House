@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
+import profile from '../../../public/user.png'
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -54,7 +55,40 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1">{navLinks}</ul>
       </div>
       <div className="navbar-end">
-        {user ? (
+
+        {
+          
+
+          user?.email ? 
+          <div className="flex items-center">
+            <div className="dropdown dropdown-end">
+            <label tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+              <div className="w-10 rounded-full">
+                  <img alt="Tailwind CSS Navbar component" src={profile}/>
+             </div>
+            </label>
+            <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
+              <li>
+                <button className="btn btn-ghost btn-sm">Masud</button>
+              </li>
+              <li>
+                <button className="btn btn-ghost btn-sm">{user.email}</button>
+              </li>
+            </ul>
+            </div>
+            <div>
+            <button onClick={handleLogOut} className="btn btn-ghost btn-sm">LogOut</button>
+            </div>
+          </div>
+            
+            :
+            <Link to='/login'>
+            <button className="btn btn-ghost btn-sm">Login</button>
+            </Link>
+        }
+
+
+        {/* {user? (
           <div>
             {user.email}
             {user.photo}
@@ -66,7 +100,7 @@ const Navbar = () => {
           <Link to="/login" className="btn">
             Login
           </Link>
-        )}
+        )} */}
       </div>
     </div>
   );
