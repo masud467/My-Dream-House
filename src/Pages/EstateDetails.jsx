@@ -33,7 +33,7 @@ const EstateDetails = () => {
   return (
     <div className="mb-10">
       <Helmet>
-        <title>real estate | details</title>
+        <title>My Dream House | details</title>
       </Helmet>
       <div className="card card-compact  bg-base-100 shadow-xl ">
         <figure>

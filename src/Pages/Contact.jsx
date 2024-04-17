@@ -4,7 +4,7 @@ const Contact = () => {
   return (
     <div className="mb-10">
         <Helmet>
-            <title>real estate | contact</title>
+            <title>My Dream House | contact</title>
         </Helmet>
       <section className="py-6 dark:bg-gray-100 dark:text-gray-900">
         <div className="grid max-w-6xl grid-cols-1 px-6 mx-auto lg:px-8 md:grid-cols-2 md:divide-x">
