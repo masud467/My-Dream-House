@@ -1,10 +1,11 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link,useLocation,useNavigate } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProvider";
 
 const Login = () => {
   const { loginUser, logInWithGoogle, logInWithGithub } =
     useContext(AuthContext);
+    const [error,setError] =useState('')
     const location = useLocation()
     const navigate = useNavigate()
     const form = location?.state || '/'
@@ -14,6 +15,7 @@ const Login = () => {
     const email = e.target.email.value;
     const password = e.target.password.value;
     console.log(email, password);
+    setError("")
 
     loginUser(email, password)
       .then((result) => {
@@ -22,6 +24,8 @@ const Login = () => {
       })
       .catch((error) => {
         console.error(error);
+        setError('invalid email and password')
+        // setError(error.message.split("/")[1].split(")"))
       });
   };
 
@@ -56,6 +60,11 @@ const Login = () => {
           </div>
           <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
             <form onSubmit={handleLogIn} className="card-body">
+              <div>
+                {
+                  error && <p className="text-red-800 font-bold">{error}</p>
+                }
+              </div>
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Email</span>
