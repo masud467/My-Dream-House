@@ -48,7 +48,7 @@ const Register = () => {
       });
   };
   return (
-    <div>
+    <div className="mb-10">
       <Helmet>
         <title>real estate | register</title>
       </Helmet>
