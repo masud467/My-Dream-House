@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../Providers/AuthProvider";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { Helmet } from "react-helmet-async";
 const Register = () => {
   const { createUser, updateUserProfile } = useContext(AuthContext);
   const [error, setError] = useState("");
@@ -48,6 +49,9 @@ const Register = () => {
   };
   return (
     <div>
+      <Helmet>
+        <title>real estate | register</title>
+      </Helmet>
       <div className="hero min-h-screen bg-base-200">
         <div className="hero-content flex-col ">
           <div className="text-center ">

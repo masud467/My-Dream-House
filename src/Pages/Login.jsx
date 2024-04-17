@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { Link,useLocation,useNavigate } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProvider";
+import { Helmet } from "react-helmet-async";
 
 const Login = () => {
   const { loginUser, logInWithGoogle, logInWithGithub } =
@@ -53,6 +54,9 @@ const Login = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>real estate | login</title>
+      </Helmet>
       <div className="hero min-h-screen bg-base-200">
         <div className="hero-content flex-col ">
           <div className="text-center ">
