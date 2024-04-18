@@ -8,7 +8,7 @@ const useEstateData = () => {
     useEffect(()=>{
         const fetchData = async () => {
             setLoading(true)
-            const res = await fetch ('/Estates.json');
+            const res = await fetch ('../Estates.json');
             const data = await res.json();
             setData(data)
             setLoading(false)

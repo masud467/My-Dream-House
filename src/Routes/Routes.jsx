@@ -21,11 +21,12 @@ import Contact from "../Pages/Contact";
         {
             path:'/',
             element:<Home></Home>,
-            loader:()=>fetch('/Estates.json')
+            loader:()=>fetch('../Estates.json')
         },
         {
           path:'/estates/:id',
-          element:<PrivateRoutes><EstateDetails></EstateDetails></PrivateRoutes>
+          element:<PrivateRoutes><EstateDetails></EstateDetails></PrivateRoutes>,
+          
         },
         {
           path:'/login',

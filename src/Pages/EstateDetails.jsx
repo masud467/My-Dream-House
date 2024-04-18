@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
-import { useParams } from "react-router-dom";
+import {  useParams } from "react-router-dom";
 import useEstateData from "../Components/Hooks/useEstateData";
 import { FaLocationDot } from "react-icons/fa6";
 
 const EstateDetails = () => {
+    
   const [singleData, setSingleData] = useState({});
   const { id } = useParams();
+  const idInt = parseInt(id)
   // eslint-disable-next-line no-unused-vars
   const { data, loading } = useEstateData();
   // const idInt = parseInt(id)
@@ -14,11 +16,11 @@ const EstateDetails = () => {
 
   useEffect(() => {
     if (data) {
-      const singleData = data.find((item) => item.id == id);
+      const singleData = data.find((item) => item.id == idInt);
       console.log(singleData);
       setSingleData(singleData);
     }
-  }, [data, id]);
+  }, [data, idInt]);
 
   const {
     image_url,
@@ -35,6 +37,7 @@ const EstateDetails = () => {
       <Helmet>
         <title>My Dream House | details</title>
       </Helmet>
+
       <div className="card card-compact  bg-base-100 shadow-xl ">
         <figure>
           <img src={image_url}  />
@@ -52,13 +55,13 @@ const EstateDetails = () => {
           </div>
           <hr />
           <p className="text-xl font-semibold">{area}</p>
-          {/* <div>
-          <p>
+          <div>
+          {/* <p>
             {
                 facilities.map(facility => <li key={facility.id}>{facility}</li>)
             }
-          </p>
-          </div> */}
+          </p> */}
+          </div>
         </div>
       </div>
     </div>
