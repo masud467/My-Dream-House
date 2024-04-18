@@ -17,6 +17,7 @@ const Navbar = () => {
       <li><NavLink to="/login">Login</NavLink></li>
       <li><NavLink to="/register">Register</NavLink></li>
       <li><NavLink to="/contact">Contact Us</NavLink></li>
+      {user && <li><NavLink to="/update-profile">Update Profile</NavLink></li>}
     </>
   );
   return (

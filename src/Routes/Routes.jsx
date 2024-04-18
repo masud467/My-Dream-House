@@ -10,6 +10,7 @@ import Register from "../Pages/Register";
 import PrivateRoutes from "./PrivateRoutes/PrivateRoutes";
 import Error from "../Pages/Error";
 import Contact from "../Pages/Contact";
+import UpdateProfile from "../Pages/UpdateProfile";
 
 
   const router = createBrowserRouter([
@@ -39,6 +40,10 @@ import Contact from "../Pages/Contact";
         {
           path:'/contact',
           element:<PrivateRoutes><Contact></Contact></PrivateRoutes>
+        },
+        {
+          path:'/update-profile',
+          element:<PrivateRoutes><UpdateProfile></UpdateProfile></PrivateRoutes>
         }
       ]
     },
